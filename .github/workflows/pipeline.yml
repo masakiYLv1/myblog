@@ -32,3 +32,23 @@ jobs:
           name: build-files
           path: dist/
           retention-days: 1
+
+  test:
+    name: Test Phase
+    runs-on: Ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm run test
