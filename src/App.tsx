@@ -6,7 +6,7 @@ function App() {
     <>
       <HStack>
         <Button variant="ghost">Click me</Button>
-        <Button variant="ghost">Click me</Button>
+        <Button variant="ghost">Click me2</Button>
       </HStack>
     </>
   );

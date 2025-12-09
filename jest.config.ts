@@ -2,7 +2,7 @@ import type { Config } from "jest";
 
 const config: Config = {
   rootDir: "./",
-  testEnvironment: "jsdom",
+  testEnvironment: "<rootDir>/test/FixJSDOMEnvironment.ts",
   setupFilesAfterEnv: ["<rootDir>/test/jest.setup.ts"],
   transform: {
     "^.+\\.tsx?$": "ts-jest",
@@ -10,6 +10,7 @@ const config: Config = {
   moduleNameMapper: {
     "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/test/mocks/fileMock.js",
     "\\.(css|scss)$": "<rootDir>/test/mocks/fileMock.js",
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
 };
 

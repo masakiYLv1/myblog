@@ -1,13 +1,22 @@
 import { render, screen } from "@testing-library/react";
 import App from "../App";
+import { Provider } from "@/components/ui/provider";
+import { mockMatchMedia } from "../../test/utils/mockMatchMedia";
+
+beforeAll(() => {
+  mockMatchMedia();
+});
 
 describe("First tests", () => {
-  test("h1 Vite + Reactの表示確認", () => {
-    render(<App />);
+  test("button Click me", () => {
+    render(
+      <Provider>
+        <App />
+      </Provider>
+    );
     expect(true).toBeTruthy();
 
-    const heading = screen.getByRole("heading", { name: "Vite + React" });
-    expect(heading).toHaveTextContent("Vite + React");
-    expect(heading).toBeInTheDocument();
+    const button = screen.getByRole("button", { name: "Click me" });
+    expect(button).toBeInTheDocument();
   });
 });
