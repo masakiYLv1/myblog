@@ -7,6 +7,8 @@ beforeAll(() => {
   mockMatchMedia();
 });
 
+jest.mock("@/features/articles/api/articlesApi.ts");
+
 describe("First tests", () => {
   test("button Click me", () => {
     render(
