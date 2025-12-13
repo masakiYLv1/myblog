@@ -1,5 +1,7 @@
 import { Card, HStack, Tag, Text } from "@chakra-ui/react";
+
 import type { Article } from "../api/types";
+import { formatDate } from "@/lib/utils";
 
 type ArticleCardProps = {
   article: Article;
@@ -24,7 +26,7 @@ export const ArticleCard = ({ article }: ArticleCardProps) => {
 
       <Card.Footer>
         <Text>{article.user_name}</Text>
-        <Text>{article.created_at}</Text>
+        <Text>{formatDate(article.created_at)}</Text>
       </Card.Footer>
     </Card.Root>
   );
