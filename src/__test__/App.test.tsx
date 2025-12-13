@@ -14,9 +14,8 @@ describe("First tests", () => {
         <App />
       </Provider>
     );
-    expect(true).toBeTruthy();
 
-    const button = screen.getByRole("button", { name: "Click me" });
-    expect(button).toBeInTheDocument();
+    const heading = screen.getByRole("heading", { name: "myBlog" });
+    expect(heading).toBeInTheDocument();
   });
 });
