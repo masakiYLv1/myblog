@@ -1,13 +1,11 @@
-import { Button, HStack } from "@chakra-ui/react";
-import "./App.css";
+import { Header } from "./components/common/Header";
+import { Footer } from "./components/common/Footer";
 
 function App() {
   return (
     <>
-      <HStack>
-        <Button variant="ghost">Click me</Button>
-        <Button variant="ghost">Click me2</Button>
-      </HStack>
+      <Header />
+      <Footer />
     </>
   );
 }
