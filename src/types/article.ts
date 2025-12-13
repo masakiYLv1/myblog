@@ -1,4 +1,4 @@
-export type Article = {
+export type ArticleDb = {
   id: string;
   user_id: string;
   title: string;
