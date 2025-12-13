@@ -1,12 +1,12 @@
 import { Header } from "./components/common/Header";
 import { Footer } from "./components/common/Footer";
-import { ArticleList } from "./features/articles/pages/ArticleList";
+import { ArticleListPage } from "./features/articles/pages/ArticleListPage";
 
 function App() {
   return (
     <>
       <Header />
-      <ArticleList />
+      <ArticleListPage />
       <Footer />
     </>
   );
